@@ -8,7 +8,7 @@ class Osc {
   releaseTime = 0.5;
 
   env;
-  triOsc;
+  osc;
 
   constructor(freq) {
     this.freq = freq
@@ -16,10 +16,10 @@ class Osc {
 
   setup() {
     this.env = new p5.Envelope();
-    this.triOsc = new p5.Oscillator('triangle');
-    this.triOsc.amp(this.env);
-    this.triOsc.freq(this.freq);
-    this.triOsc.start();
+    this.osc = new p5.Oscillator('triangle');
+    this.osc.amp(this.env);
+    this.osc.freq(this.freq);
+    this.osc.start();
   }
 
   draw() {
@@ -33,10 +33,10 @@ class Osc {
 
   playEnv() {
     // ensure that audio is enabled
-    this.triOsc.stop();
-    this.triOsc.freq(this.freq);
+    this.osc.stop();
+    this.osc.freq(this.freq);
     console.log("freq: ", this.freq)
-    this.triOsc.start();
+    this.osc.start();
 
     this.env.setADSR(this.attackTime, this.decayTime, this.susPercent, this.releaseTime);
     this.env.setRange(this.attackLevel, this.releaseLevel);
