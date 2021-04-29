@@ -30,7 +30,7 @@ function touchStarted() {
   if (getAudioContext().state !== 'running') {
     userStartAudio();
     myDiv.remove();
-    console.log('Audio was not enabled');
+    console.log('Audio now enabled');
   }
   return false
 }
