@@ -1,6 +1,6 @@
 let synths = []
 let myDiv;
-let oscCount = 2;
+let oscCount = 1;
 
 let keyboard = new QwertyHancock({
   id: 'keyboard',
