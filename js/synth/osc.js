@@ -16,7 +16,7 @@ class Osc {
 
   setup() {
     this.env = new p5.Envelope();
-    this.triOsc = new p5.Oscillator('sine');
+    this.triOsc = new p5.Oscillator('saw');
     this.triOsc.amp(this.env);
     this.triOsc.freq(this.freq);
     this.triOsc.start();
