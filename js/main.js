@@ -1,6 +1,6 @@
 let synths = []
 let myDiv;
-let oscCount = 1;
+let oscCount = 2;
 
 let keyboard = new QwertyHancock({
   id: 'keyboard',
@@ -47,8 +47,6 @@ keyboard.keyDown = function (note, frequency) {
     synths[c].playEnv()
   }
   console.log('Key: ', note, 'Frequency: ', frequency);
-
-
 
   for (let c=synths.length-1; c>=0; c--){
     synths.splice(c,1)
