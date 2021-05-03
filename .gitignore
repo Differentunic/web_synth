@@ -10,8 +10,8 @@ tile.png
 robots.txt
 browserconfig.xml
 favicon.ico
-img
-doc
+img/
+doc/
 .htaccess
 404.html
 humans.txt
