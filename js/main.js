@@ -4,9 +4,9 @@ let oscCount = 2;
 
 let keyboard = new QwertyHancock({
   id: 'keyboard',
-  width: 1200,
+  width: parseInt(window.innerWidth),
   height: 150,
-  octaves: 4,
+  octaves: parseInt(window.innerWidth / 300),
   startNote: 'A2',
   whiteNotesColour: 'white',
   blackNotesColour: 'black',
@@ -16,8 +16,8 @@ let keyboard = new QwertyHancock({
 function setup() {
   myDiv = createDiv('click to start audio');
   myDiv.position(0, 0);
-
   getAudioContext().suspend();
+  console.log(parseInt(window.innerWidth))
   // This won't play until the context has started
 }
 
