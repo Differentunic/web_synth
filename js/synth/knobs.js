@@ -1,9 +1,0 @@
-class Knobs() {
-  setup() {
-
-  }
-  draw() {
-
-  }
-
-}
