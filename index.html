@@ -23,13 +23,21 @@
 
 </head>
 
-<body style="background-color: #404040; overflow: hidden;">
+<body style="">
 
   <!-- Add your site or application content here -->
+  <div class="row m-3">
+    <div class="col-6 col-sm-3"><button type="button" class="btn btn-primary btn-lg" onclick="osc1_btn()">1</button></div>
+    <div class="col-6 col-sm-3"></div>
+
+    <!-- Force next columns to break to new line -->
+    <div class="w-100"></div>
+
+    <div class="col-6 col-sm-3 mt-3"><button type="button" class="btn btn-primary btn-lg" onclick="osc2_btn()">2</button></div>
+    <div class="col-6 col-sm-3"></div>
+  </div>
+
   <div class="d-flex justify-content-around">
-    <button type="button" class="btn btn-dark position-relative">
-      Marker <svg width="1em" height="1em" viewBox="0 0 16 16" class="position-absolute top-100 start-50 translate-middle mt-1 bi bi-caret-down-fill" fill="#212529" xmlns="http://www.w3.org/2000/svg"><path d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/></svg>
-    </button>
     <div id="keyboard" class="position-absolute bottom-0 start-50 translate-middle-x"></div>
   </div>
 
@@ -41,6 +49,7 @@
   <script src="js/libs/addons/p5.sound.js"></script>
 
   <script src="js/synth/osc.js"></script>
+  <script src="js/synth/waveSelector.js"></script>
   <script src="js/libs/qwerty-hancock.js"></script>
   <script src="js/main.js"></script>
 
