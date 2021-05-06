@@ -1,6 +1,6 @@
 # web_synth
 
-### Libraries
+### JS Libraries
 
 - p5js
 - Qwerty Hancock
