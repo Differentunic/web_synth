@@ -12,14 +12,13 @@ let keyboard = new QwertyHancock({
   height: 150,
   octaves: parseInt(window.innerWidth / 300),
   startNote: 'A2',
+  keyOctave: '2',
   whiteKeyColour: 'white',
   blackKeyColour: 'black',
   activeColour: '#f36e39'
 });
 
 function setup() {
-  myDiv = createDiv('click to start audio');
-  myDiv.position(windowWidth / 2, windowHeight / 2);
   getAudioContext().suspend();
   // This won't play until the context has started
 
@@ -31,20 +30,22 @@ function setup() {
 }
 
 function draw() {
-  // mySynth.draw();
-
 }
 
 function touchStarted() {
   if (getAudioContext().state !== 'running') {
     userStartAudio();
-    myDiv.remove();
     console.log('Audio now enabled');
   }
+  document.getElementById('audio-init').remove();
   return false
 }
 
 keyboard.keyDown = function (note, frequency) {
+  console.log('dial_a1: ', dialValue('dial_a1'));
+  console.log('dial_d1: ', dialValue('dial_d1'));
+  console.log('dial_s1: ', dialValue('dial_s1'));
+  console.log('dial_r1: ', dialValue('dial_r1'));
   // For each key pressed set 2 oscillators are set a frequency of pressed key
   switch (voiceCurrent) {
     case 0:
@@ -100,4 +101,5 @@ keyboard.keyDown = function (note, frequency) {
   }
 };
 
-
+window.addEventListener('PageFastLoaded', enhanceAll);
+window.addEventListener('DOMContentLoaded', enhanceAll);
