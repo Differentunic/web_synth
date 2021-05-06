@@ -11,7 +11,6 @@ function makeDial(dial) {
     window.addEventListener('mouseup', onMouseUp);
     window.addEventListener('mousemove', onMouseMove);
     document.body.classList.add('u-isGrabbing');
-    console.log('Dial: ', dial.id, 'Value: ', dialValue);
   }
   function onMouseUp(e, sliderHandle) {
     window.removeEventListener('mouseup', onMouseUp);

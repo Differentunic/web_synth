@@ -12,7 +12,7 @@ let keyboard = new QwertyHancock({
   height: 150,
   octaves: parseInt(window.innerWidth / 300),
   startNote: 'A2',
-  keyOctave: '2',
+  keyOctave: '3',
   whiteKeyColour: 'white',
   blackKeyColour: 'black',
   activeColour: '#f36e39'
@@ -27,6 +27,7 @@ function setup() {
     synth.setup();
     voices.push(synth);
   }
+  noCanvas()
 }
 
 function draw() {
@@ -37,7 +38,10 @@ function touchStarted() {
     userStartAudio();
     console.log('Audio now enabled');
   }
-  document.getElementById('audio-init').remove();
+  audioIntDiv = document.getElementById('audio-init')
+  if (audioIntDiv !==  null) {
+    audioIntDiv.remove();
+  }
   return false
 }
 
@@ -46,56 +50,60 @@ keyboard.keyDown = function (note, frequency) {
   console.log('dial_d1: ', dialValue('dial_d1'));
   console.log('dial_s1: ', dialValue('dial_s1'));
   console.log('dial_r1: ', dialValue('dial_r1'));
+  a = dialValue('dial_a1');
+  d = dialValue('dial_d1');
+  s = dialValue('dial_s1');
+  r = dialValue('dial_r1');
   // For each key pressed set 2 oscillators are set a frequency of pressed key
   switch (voiceCurrent) {
     case 0:
-      voices[voiceCurrent].playEnv(frequency, osc1Shape);
-      voices[voiceCurrent + 1].playEnv(frequency, osc2Shape);
+      voices[voiceCurrent].playEnv(frequency, osc1Shape,  a, d, s, r);
+      voices[voiceCurrent + 1].playEnv(frequency, osc2Shape,  a, d, s, r);
       voiceCurrent++
       break;
     case 1:
-      voices[voiceCurrent].playEnv(frequency, osc1Shape);
-      voices[voiceCurrent + 1].playEnv(frequency, osc2Shape);
+      voices[voiceCurrent].playEnv(frequency, osc1Shape,  a, d, s, r);
+      voices[voiceCurrent + 1].playEnv(frequency, osc2Shape,  a, d, s, r);
       voiceCurrent++
       break;
     case 2:
-      voices[voiceCurrent].playEnv(frequency, osc1Shape);
-      voices[voiceCurrent + 1].playEnv(frequency, osc2Shape);
+      voices[voiceCurrent].playEnv(frequency, osc1Shape,  a, d, s, r);
+      voices[voiceCurrent + 1].playEnv(frequency, osc2Shape,  a, d, s, r);
       voiceCurrent++
       break;
     case 3:
-      voices[voiceCurrent].playEnv(frequency, osc1Shape);
-      voices[voiceCurrent + 1].playEnv(frequency, osc2Shape);
+      voices[voiceCurrent].playEnv(frequency, osc1Shape,  a, d, s, r);
+      voices[voiceCurrent + 1].playEnv(frequency, osc2Shape,  a, d, s, r);
       voiceCurrent++
       break;
     case 4:
-      voices[voiceCurrent].playEnv(frequency, osc1Shape);
-      voices[voiceCurrent + 1].playEnv(frequency, osc2Shape);
+      voices[voiceCurrent].playEnv(frequency, osc1Shape,  a, d, s, r);
+      voices[voiceCurrent + 1].playEnv(frequency, osc2Shape,  a, d, s, r);
       voiceCurrent++
       break;
     case 5:
-      voices[voiceCurrent].playEnv(frequency, osc1Shape);
-      voices[voiceCurrent + 1].playEnv(frequency, osc2Shape);
+      voices[voiceCurrent].playEnv(frequency, osc1Shape,  a, d, s, r);
+      voices[voiceCurrent + 1].playEnv(frequency, osc2Shape,  a, d, s, r);
       voiceCurrent++
       break;
     case 6:
-      voices[voiceCurrent].playEnv(frequency, osc1Shape);
-      voices[voiceCurrent + 1].playEnv(frequency, osc2Shape);
+      voices[voiceCurrent].playEnv(frequency, osc1Shape,  a, d, s, r);
+      voices[voiceCurrent + 1].playEnv(frequency, osc2Shape,  a, d, s, r);
       voiceCurrent++
       break;
     case 7:
-      voices[voiceCurrent].playEnv(frequency, osc1Shape);
-      voices[voiceCurrent + 1].playEnv(frequency, osc2Shape);
+      voices[voiceCurrent].playEnv(frequency, osc1Shape,  a, d, s, r);
+      voices[voiceCurrent + 1].playEnv(frequency, osc2Shape,  a, d, s, r);
       voiceCurrent++
       break;
     case 8:
-      voices[voiceCurrent].playEnv(frequency, osc1Shape);
-      voices[voiceCurrent + 1].playEnv(frequency, osc2Shape);
+      voices[voiceCurrent].playEnv(frequency, osc1Shape,  a, d, s, r);
+      voices[voiceCurrent + 1].playEnv(frequency, osc2Shape,  a, d, s, r);
       voiceCurrent++
       break;
     case 9:
-      voices[voiceCurrent].playEnv(frequency, osc1Shape);
-      voices[voiceCurrent + 1].playEnv(frequency, osc2Shape);
+      voices[voiceCurrent].playEnv(frequency, osc1Shape,  a, d, s, r);
+      voices[voiceCurrent + 1].playEnv(frequency, osc2Shape,  a, d, s, r);
       voiceCurrent = 0;
       break;
   }
