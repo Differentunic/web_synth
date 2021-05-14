@@ -6,11 +6,14 @@
   <title>Web Synth</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
   <!-- Spectrum CSS -->
   <link href="css/dist/index.min.css" rel="stylesheet">
   <!-- Custom CSS -->
   <link href="css/main.css" rel="stylesheet">
+  <link href="css/wave-shapes.css" rel="stylesheet">
 
   <meta property="og:title" content="">
   <meta property="og:type" content="">
@@ -28,7 +31,6 @@
 <body>
 
   <!-- Add your site or application content here -->
-
   <div class="d-flex">
     <div class="d-block">
       <div id="dial_a1" class="spectrum-Dial">
@@ -84,7 +86,7 @@
 
   <div class="d-flex flex-column">
     <div class="d-flex">
-      <p>Oscillators</p>
+      <p class="spectrum-Heading spectrum-Heading--sizeL spectrum-Heading--light">Oscillators</p>
     </div>
     <div class="d-flex">
       <div class="d-flex">
@@ -92,13 +94,18 @@
       </div>
       <div class="d-flex flex-column">
         <div class="d-flex">
-          <svg><g viewBox="0 0 100 100"><ellipse class="indicator-off" rx="12" ry="12" cx="12" cy="12"></ellipse></g></svg>
-          <svg><g viewBox="0 0 100 100"><ellipse class="indicator-off" rx="12" ry="12" cx="12" cy="12"></ellipse></g></svg>
+          <span id="osc1_sine" class="indicator-off"></span>
+          <span class="wave-sine"></span>
+          <span class="indicator-spacing"></span>
+          <span id="osc1_triangle" class="indicator-off"></span>
+          <span class="wave-triangle"></span>
         </div>
         <div class="d-flex">
-          <svg><g viewBox="0 0 100 100"><ellipse class="indicator-off" rx="12" ry="12" cx="12" cy="12"></ellipse></g></svg>
-          <svg><g viewBox="0 0 100 100"><ellipse class="indicator-off" rx="12" ry="12" cx="12" cy="12"></ellipse></g></svg>
-
+          <span id="osc1_saw" class="indicator-off"></span>
+          <span class="wave-saw"></span>
+          <span class="indicator-spacing"></span>
+          <span id="osc1_square" class="indicator-off"></span>
+          <span class="wave-square"></span>
         </div>
       </div>
     </div>
@@ -108,14 +115,18 @@
       </div>
       <div class="d-flex flex-column">
         <div class="d-flex">
-          <svg><g viewBox="0 0 100 100"><ellipse class="indicator-off" rx="12" ry="12" cx="12" cy="12"></ellipse></g></svg>
-          <svg><g viewBox="0 0 100 100"><ellipse class="indicator-off" rx="12" ry="12" cx="12" cy="12"></ellipse></g></svg>
-
+          <span id="osc2_sine" class="indicator-off"></span>
+          <span class="wave-sine"></span>
+          <span class="indicator-spacing"></span>
+          <span id="osc2_triangle" class="indicator-off"></span>
+          <span class="wave-triangle"></span>
         </div>
         <div class="d-flex">
-          <svg><g viewBox="0 0 100 100"><ellipse class="indicator-off" rx="12" ry="12" cx="12" cy="12"></ellipse></g></svg>
-          <svg><g viewBox="0 0 100 100"><ellipse class="indicator-off" rx="12" ry="12" cx="12" cy="12"></ellipse></g></svg>
-
+          <span id="osc2_saw" class="indicator-off"></span>
+          <span class="wave-saw"></span>
+          <span class="indicator-spacing"></span>
+          <span id="osc2_square" class="indicator-off"></span>
+          <span class="wave-square"></span>
         </div>
       </div>
     </div>

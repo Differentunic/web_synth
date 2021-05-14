@@ -1,8 +1,7 @@
 .btn-custom {
   display: inline-block;
-  width: 50px;
-  height: 50px;
-  margin: 20px;
+  width: 64px;
+  height: 64px;
   font-weight: 400;
   color: #00d2b9;
   text-align: center;
@@ -18,27 +17,40 @@
   border-radius: 0.25rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
-
 .btn-custom:hover{
   background: #444;
 }
-
 .indicator-off {
+  background-color: rgba(89,0,0,1);
   fill: rgba(89,0,0,1);
+  border: 2px solid rgba(0,0,0,1);
   stroke: rgba(0,0,0,1);
+  height: 16px;
+  width: 16px;
+  border-radius:50%;
+  -moz-border-radius:50%;
+  -webkit-border-radius:50%;
+  display: inline-block;
 }
-
 .indicator-on {
   fill: rgba(255,0,0,1);
+  border: 2px solid rgba(0,0,0,1);
   stroke: rgba(0,0,0,1);
+  height: 16px;
+  width: 16px;
+  border-radius:50%;
+  -moz-border-radius:50%;
+  -webkit-border-radius:50%;
+  display: inline-block;
 }
-
-
 .dial-label-custom {
-  font-family: Segoe UI;
   font-style: normal;
   font-weight: bold;
   font-size: 2rem;
+}
+.indicator-spacing {
+  width: 16px;
+  height: 16px;
 }
 
 /* Just some CSS from Bootstrap*/
@@ -461,4 +473,144 @@
 
 .flex-wrap-reverse {
   flex-wrap: wrap-reverse !important;
+}
+
+/* Bootstrap padding */
+.p-xxl-0 {
+  padding: 0 !important;
+}
+.p-xxl-1 {
+  padding: 0.25rem !important;
+}
+.p-xxl-2 {
+  padding: 0.5rem !important;
+}
+.p-xxl-3 {
+  padding: 1rem !important;
+}
+.p-xxl-4 {
+  padding: 1.5rem !important;
+}
+.p-xxl-5 {
+  padding: 3rem !important;
+}
+.px-xxl-0 {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+.px-xxl-1 {
+  padding-right: 0.25rem !important;
+  padding-left: 0.25rem !important;
+}
+.px-xxl-2 {
+  padding-right: 0.5rem !important;
+  padding-left: 0.5rem !important;
+}
+.px-xxl-3 {
+  padding-right: 1rem !important;
+  padding-left: 1rem !important;
+}
+.px-xxl-4 {
+  padding-right: 1.5rem !important;
+  padding-left: 1.5rem !important;
+}
+.px-xxl-5 {
+  padding-right: 3rem !important;
+  padding-left: 3rem !important;
+}
+.py-xxl-0 {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+.py-xxl-1 {
+  padding-top: 0.25rem !important;
+  padding-bottom: 0.25rem !important;
+}
+.py-xxl-2 {
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+}
+.py-xxl-3 {
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+}
+.py-xxl-4 {
+  padding-top: 1.5rem !important;
+  padding-bottom: 1.5rem !important;
+}
+.py-xxl-5 {
+  padding-top: 3rem !important;
+  padding-bottom: 3rem !important;
+}
+.pt-xxl-0 {
+  padding-top: 0 !important;
+}
+.pt-xxl-1 {
+  padding-top: 0.25rem !important;
+}
+.pt-xxl-2 {
+  padding-top: 0.5rem !important;
+}
+.pt-xxl-3 {
+  padding-top: 1rem !important;
+}
+.pt-xxl-4 {
+  padding-top: 1.5rem !important;
+}
+.pt-xxl-5 {
+  padding-top: 3rem !important;
+}
+.pe-xxl-0 {
+  padding-right: 0 !important;
+}
+.pe-xxl-1 {
+  padding-right: 0.25rem !important;
+}
+.pe-xxl-2 {
+  padding-right: 0.5rem !important;
+}
+.pe-xxl-3 {
+  padding-right: 1rem !important;
+}
+.pe-xxl-4 {
+  padding-right: 1.5rem !important;
+}
+.pe-xxl-5 {
+  padding-right: 3rem !important;
+}
+.pb-xxl-0 {
+  padding-bottom: 0 !important;
+}
+.pb-xxl-1 {
+  padding-bottom: 0.25rem !important;
+}
+.pb-xxl-2 {
+  padding-bottom: 0.5rem !important;
+}
+.pb-xxl-3 {
+  padding-bottom: 1rem !important;
+}
+.pb-xxl-4 {
+  padding-bottom: 1.5rem !important;
+}
+.pb-xxl-5 {
+  padding-bottom: 3rem !important;
+}
+.ps-xxl-0 {
+  padding-left: 0 !important;
+}
+.ps-xxl-1 {
+  padding-left: 0.25rem !important;
+}
+.ps-xxl-2 {
+  padding-left: 0.5rem !important;
+}
+.ps-xxl-3 {
+  padding-left: 1rem !important;
+}
+.ps-xxl-4 {
+  padding-left: 1.5rem !important;
+}
+.ps-xxl-5 {
+  padding-left: 3rem !important;
 }

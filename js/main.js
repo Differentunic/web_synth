@@ -20,8 +20,6 @@ let keyboard = new QwertyHancock({
 
 function setup() {
   getAudioContext().suspend();
-  // This won't play until the context has started
-
   for(let c=0; c<voiceCount; c++) {
     let synth = new Osc
     synth.setup();
@@ -29,22 +27,17 @@ function setup() {
   }
   noCanvas()
 }
-
-function draw() {
-}
-
+// Starts audio context on a user interaction
 function touchStarted() {
   if (getAudioContext().state !== 'running') {
     userStartAudio();
     console.log('Audio now enabled');
   }
-  audioIntDiv = document.getElementById('audio-init')
-  if (audioIntDiv !==  null) {
-    audioIntDiv.remove();
+  if (document.getElementById('audio-init') !==  null) {
+    document.getElementById('audio-init').remove();
   }
   return false
 }
-
 keyboard.keyDown = function (note, frequency) {
   console.log('dial_a1: ', dialValue('dial_a1'));
   console.log('dial_d1: ', dialValue('dial_d1'));

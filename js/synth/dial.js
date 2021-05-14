@@ -38,7 +38,7 @@ function enhanceAll() {
 }
 
 function dialValue(dial_id) {
-  return dict.get(dial_id) ?? '0';
+  return dict.get(dial_id) ?? '10';
 }
 
 window.addEventListener('PageFastLoaded', enhanceAll);
