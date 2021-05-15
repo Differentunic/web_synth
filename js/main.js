@@ -3,8 +3,6 @@ let myDiv;
 let oscCount = 2;
 let voiceCount = 20;
 let voiceCurrent = 0;
-let osc1Shape = 'sine';
-let osc2Shape = 'sine';
 
 let keyboard = new QwertyHancock({
   id: 'keyboard',
@@ -20,8 +18,6 @@ let keyboard = new QwertyHancock({
 
 function setup() {
   getAudioContext().suspend();
-  // This won't play until the context has started
-
   for(let c=0; c<voiceCount; c++) {
     let synth = new Osc
     synth.setup();
@@ -29,31 +25,32 @@ function setup() {
   }
   noCanvas()
 }
-
-function draw() {
-}
-
+// Starts audio context on a user interaction
 function touchStarted() {
   if (getAudioContext().state !== 'running') {
     userStartAudio();
     console.log('Audio now enabled');
   }
-  audioIntDiv = document.getElementById('audio-init')
-  if (audioIntDiv !==  null) {
-    audioIntDiv.remove();
+  if (document.getElementById('audio-init') !==  null) {
+    document.getElementById('audio-init').remove();
   }
   return false
 }
-
 keyboard.keyDown = function (note, frequency) {
-  console.log('dial_a1: ', dialValue('dial_a1'));
-  console.log('dial_d1: ', dialValue('dial_d1'));
-  console.log('dial_s1: ', dialValue('dial_s1'));
-  console.log('dial_r1: ', dialValue('dial_r1'));
   a = dialValue('dial_a1');
   d = dialValue('dial_d1');
   s = dialValue('dial_s1');
   r = dialValue('dial_r1');
+  osc1Shape = getWaveShape(1);
+  osc2Shape = getWaveShape(2);
+
+  console.log('dial_a1: ', dialValue('dial_a1'));
+  console.log('dial_d1: ', dialValue('dial_d1'));
+  console.log('dial_s1: ', dialValue('dial_s1'));
+  console.log('dial_r1: ', dialValue('dial_r1'));
+
+  console.log('osc1 shape: ', osc1Shape);
+  console.log('osc2 shape: ', osc2Shape);
   // For each key pressed set 2 oscillators are set a frequency of pressed key
   switch (voiceCurrent) {
     case 0:
