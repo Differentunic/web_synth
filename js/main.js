@@ -3,8 +3,6 @@ let myDiv;
 let oscCount = 2;
 let voiceCount = 20;
 let voiceCurrent = 0;
-let osc1Shape = 'sine';
-let osc2Shape = 'sine';
 
 let keyboard = new QwertyHancock({
   id: 'keyboard',
@@ -39,14 +37,20 @@ function touchStarted() {
   return false
 }
 keyboard.keyDown = function (note, frequency) {
-  console.log('dial_a1: ', dialValue('dial_a1'));
-  console.log('dial_d1: ', dialValue('dial_d1'));
-  console.log('dial_s1: ', dialValue('dial_s1'));
-  console.log('dial_r1: ', dialValue('dial_r1'));
   a = dialValue('dial_a1');
   d = dialValue('dial_d1');
   s = dialValue('dial_s1');
   r = dialValue('dial_r1');
+  osc1Shape = getWaveShape(1);
+  osc2Shape = getWaveShape(2);
+
+  console.log('dial_a1: ', dialValue('dial_a1'));
+  console.log('dial_d1: ', dialValue('dial_d1'));
+  console.log('dial_s1: ', dialValue('dial_s1'));
+  console.log('dial_r1: ', dialValue('dial_r1'));
+
+  console.log('osc1 shape: ', osc1Shape);
+  console.log('osc2 shape: ', osc2Shape);
   // For each key pressed set 2 oscillators are set a frequency of pressed key
   switch (voiceCurrent) {
     case 0:

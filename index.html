@@ -85,14 +85,14 @@
   </div>
 
   <div class="d-flex flex-column">
-    <div class="d-flex">
+    <div class="d-flex pb-xxl-1">
       <p class="spectrum-Heading spectrum-Heading--sizeL spectrum-Heading--light">Oscillators</p>
     </div>
     <div class="d-flex">
       <div class="d-flex">
-        <button type="button" class="btn-custom" onclick="osc1_btn()">1</button>
+        <button id="osc1_btn" type="button" class="btn-custom"">1</button>
       </div>
-      <div class="d-flex flex-column">
+      <div class="d-flex flex-column justify-content-between">
         <div class="d-flex">
           <span id="osc1_sine" class="indicator-off"></span>
           <span class="wave-sine"></span>
@@ -109,11 +109,11 @@
         </div>
       </div>
     </div>
-    <div class="d-flex">
+    <div class="d-flex pt-xxl-5">
       <div class="d-flex">
-        <button type="button" class="btn-custom" onclick="osc2_btn()">2</button>
+        <button id="osc2_btn" type="button" class="btn-custom"">2</button>
       </div>
-      <div class="d-flex flex-column">
+      <div class="d-flex flex-column justify-content-between">
         <div class="d-flex">
           <span id="osc2_sine" class="indicator-off"></span>
           <span class="wave-sine"></span>
